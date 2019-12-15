@@ -1,0 +1,37 @@
+<div class="bg_base_lr">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3" style="max-width:350px;"></div>
+      <div class="col-sm-6" style="">
+        <div class="alert alert-secondary text-center" role="alert" >
+          Đăng nhập
+        </div>
+<form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" class="form-control" name="username" formControlName="username"
+             placeholder="Tên username" required />
+      <div class="alert alert-danger" role="alert"
+           *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">
+        Username phải có ít nhất 6 kí tự!
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" formControlName="password"
+             placeholder="Mật khẩu" required minlength="6" />
+      <div class="alert alert-danger" role="alert"
+           *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+        Mật khẩu gồm 6 ký tự và tối đa 16 ký tự
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="alert alert-danger" role="alert" *ngIf="check=='false'">
+        Đăng nhập thất bại
+      </div>
+      <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+    </div>
+  </form>
+      </div>
+      <div class="col-sm-3" style="max-width:350px;"></div>
+    </div>
+  </div>
+</div>

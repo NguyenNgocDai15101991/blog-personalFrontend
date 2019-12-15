@@ -1,0 +1,33 @@
+
+<div role="alert" id="createBlog">
+  <div *ngIf="userService.userOnline.username!=''"><a routerLink="createBlog">
+    <img src="https://previews.123rf.com/images/amasterpics123/amasterpics1231308/amasterpics123130800001/21579254-3d-homme-montrant-geste-ok-avec-signe-plus-vert-isol%C3%A9-sur-fond-blanc-avec-la-r%C3%A9flexion.jpg">
+  </a></div>
+</div>
+<div class="container">
+  <div class="row">
+<!--    <div class="col-md-2" id="sidebar">-->
+<!--      <div>Danh sách sản phẩm</div>-->
+<!--      <hr>-->
+<!--      <br>-->
+<!--    </div>-->
+      <div class="container">
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12" *ngFor="let post of posts">
+            <div class="product-grid4">
+              <div class="product-image4">
+                <a [routerLink]="['details',post.id]">
+                  <img class="pic-1" [src]="post.pictures[0].name">
+                  <img class="pic-2" [src]="post.pictures[1].name">
+                </a>
+              <div class="product-content">
+                <h3 class="title">{{post.name}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>

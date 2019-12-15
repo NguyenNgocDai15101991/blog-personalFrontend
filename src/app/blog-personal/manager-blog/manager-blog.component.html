@@ -1,0 +1,24 @@
+<div role="alert" id="createBlog">
+  <div><a (click)="bachToHome()">
+    <img src="https://previews.123rf.com/images/aquamann/aquamann1112/aquamann111200017/11660653-green-house-icon.jpg">
+  </a></div>
+</div>
+<table class="table table-striped">
+  <tr>
+    <th>$ Tên Blog</th>
+    <th>$ Ảnh Blog</th>
+    <th>$ Nội dung</th>
+    <th>$ Chức Năng</th>
+  </tr>
+  <br>
+  <tr *ngFor="let post of posts">
+    <th>{{post.name}}</th>
+    <td><u *ngFor="let image of post.pictures"><img [src]="image.name" width="100px" height="100px" alt=""></u></td>
+    <th class="text-danger">{{post.content}}</th>
+    <th>
+      <a class="btn btn-success" [routerLink]="['updatePost',post.id]">sửa</a> |
+      <a class="btn btn-success" [routerLink]="['deletePost',post.id]">Xóa</a>
+    </th>
+  </tr>
+</table>
+<router-outlet></router-outlet>

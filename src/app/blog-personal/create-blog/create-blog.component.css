@@ -1,0 +1,10 @@
+#createBlog img {
+  width: 100px;
+  height: 100px;
+  top: 35px;
+  right: 250px;
+  position: fixed;
+  display: inline-block;
+  margin: 0 20px;
+  border-radius: 50%;
+}

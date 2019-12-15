@@ -1,0 +1,22 @@
+
+<div role="alert" id="createBlog">
+  <div><a (click)="bachToHome()">
+    <img src="https://previews.123rf.com/images/aquamann/aquamann1112/aquamann111200017/11660653-green-house-icon.jpg">
+  </a></div>
+</div>
+<h1 class="title text-center">{{post.name}}</h1>
+<div class="container">
+  <div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div class="product-grid4">
+      <div class="product-image4">
+        <img class="pic-1" [src]="post.pictures[0].name">
+        <img class="pic-2" [src]="post.pictures[1].name">
+        <div class="product-content">
+          {{post.content}}
+        </div>
+      </div>
+  </div>
+</div>
+  </div>
+</div>
